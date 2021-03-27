@@ -36,6 +36,42 @@ module.exports = {
         updatedAt: "2020-07-01 10:00:00",
       },
       {
+        uuid: "2efd710e-87f7-4421-ad97-357f47d5444b",
+        content: "That's cool!! I'm joining the 'remote club' too",
+        from: "john",
+        to: "jane",
+        createdAt: "2020-07-01 11:00:00",
+        updatedAt: "2020-07-01 11:00:00",
+      },
+
+      {
+        uuid: "c4638a3a-03d2-4e14-99e2-25eba8192546",
+        content: "Really!! How come?",
+        from: "jane",
+        to: "john",
+        createdAt: "2020-07-01 12:00:00",
+        updatedAt: "2020-07-01 12:00:00",
+      },
+
+      {
+        uuid: "c84d33f5-2eb1-4f06-a99d-9a4161a1f652",
+        content: "Got promoted to a consultancy role",
+        from: "john",
+        to: "jane",
+        createdAt: "2020-07-01 13:00:00",
+        updatedAt: "2020-07-01 13:00:00",
+      },
+
+      {
+        uuid: "40290cc3-aeed-4813-8d31-c147f9442d45",
+        content: "That's amazing!! Well done",
+        from: "jane",
+        to: "john",
+        createdAt: "2020-07-01 14:00:00",
+        updatedAt: "2020-07-01 14:00:00",
+      },
+
+      {
         uuid: "fd4cee68-5caf-4b1b-80a9-5b9add7fd863",
         content: "Hey John, are you done with that task?",
         from: "boss",
