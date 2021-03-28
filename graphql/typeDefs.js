@@ -7,7 +7,7 @@ module.exports = gql`
     createdAt: String!
     token: String
     latestMessage: Message
-    imageUrl: String!
+    imageUrl: String
   }
   type Message {
     uuid: String!

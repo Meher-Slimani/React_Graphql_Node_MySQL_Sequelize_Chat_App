@@ -53,7 +53,13 @@ const Users = () => {
             dispatch({ type: "SET_SELECTED_USER", payload: user.username })
           }
         >
-          <Image src={user.imageUrl} className="user-image" />
+          <Image
+            src={
+              user.imageUrl ||
+              "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
+            }
+            className="user-image"
+          />
           <div className="ml-2 d-none d-md-block">
             <p className="text-success">{user.username}</p>
             <p className="font-wheight-light"></p>

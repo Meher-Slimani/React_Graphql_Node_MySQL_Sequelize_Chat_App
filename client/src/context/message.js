@@ -4,7 +4,8 @@ const MessageStateContext = createContext();
 const MessageDispatchContext = createContext();
 
 const messageReducer = (state, { type, payload }) => {
-  let usersCopy;
+  let usersCopy, userIndex;
+  const { username, message, messages } = payload;
   switch (type) {
     case "SET_USERS":
       return {
@@ -12,10 +13,9 @@ const messageReducer = (state, { type, payload }) => {
         users: payload,
       };
     case "SET_USER_MESSAGES":
-      const { username, messages } = payload;
       usersCopy = [...state.users];
 
-      const userIndex = usersCopy.findIndex((u) => u.username === username);
+      userIndex = usersCopy.findIndex((u) => u.username === username);
 
       usersCopy[userIndex] = { ...usersCopy[userIndex], messages };
       return {
@@ -27,6 +27,22 @@ const messageReducer = (state, { type, payload }) => {
         ...user,
         selected: user.username === payload,
       }));
+      return {
+        ...state,
+        users: usersCopy,
+      };
+    case "ADD_MESSAGE":
+      usersCopy = [...state.users];
+
+      userIndex = usersCopy.findIndex((u) => u.username === username);
+
+      let newUser = {
+        ...usersCopy[userIndex],
+        messages: [message, ...usersCopy[userIndex].messages],
+      };
+
+      usersCopy[userIndex] = newUser;
+
       return {
         ...state,
         users: usersCopy,
